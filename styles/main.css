@@ -1,4 +1,242 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
 	background-color: #1e1e2e;
+	max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+	height: 200vh;
+}
+
+#header-right {
+	z-index: 2;
+	float: right;
+	right: 10px; 
+	position: fixed;
+}
+
+#smiley-toggle {
+	aspect-ratio: 1;
+	border: 0;
+	padding: 0px;
+	/* background-color: #f9e2af; */
+	background: none;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	z-index: 1;
+	cursor: pointer;
+	position: relative;
+	/* Required for the ::after pseudo-element */
+	/* transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); */
+}
+
+#smiley {
+	width: 80px;
+	border-radius: 50%;
+	z-index: 1;
+	transform-origin: center;
+	padding: 5px;
+	/* background-color: #f9e2af; */
+	transform-style: preserve-3d;
+}
+
+#logo {
+	background-color: #f9e2af;
+	border-radius: 50%;
+}
+
+#logo-clipping {
+	z-index: 1;
+	clip-path: none;
+}
+
+#logo-clipping[clipping] {
+	clip-path: circle(50%);
+}
+
+#smiley[sidebar-open] {
+	animation: spin 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+#smiley[dropping] {
+	transform-origin: bottom;
+	transform: perspective(80px);
+	animation: drop 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+		filter: blur(0px);
+	}
+
+	50% {
+		filter: blur(4px);
+	}
+
+	100% {
+		transform: rotate(720deg);
+		filter: blur(0px);
+	}
+}
+
+@keyframes drop {
+	0% {
+		transform: rotateX(0deg);
+		filter: blur(0px);
+	}
+
+	25% {
+		transform: rotateX(75deg);
+		filter: blur(3px);
+	}
+
+	50% {
+		transform: rotateX(-86deg);
+		filter: blur(2px);
+	}
+
+	75% {
+		transform: rotateX(54deg);
+		filter: blur(3px);
+	}
+
+	100% {
+		transform: rotateX(0deg);
+		filter: blur(0px);
+	}
+}
+
+#right-sidebar {
+	position: fixed;
+	top: 0;
+	right: -340px;
+	/* Initially hidden */
+	width: 300px;
+	/* Width of the sidebar */
+	height: 100%;
+	background-color: #11111b;
+	padding: 20px;
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+	transition: right 0.3s ease-in-out;
+}
+
+#right-sidebar[shown] {
+	right: 0;
+	/* Slide in when 'shown' attribute is present */
+}
+
+#main-content {
+	padding: 100px;
+}
+
+.static-text {
 	color: #cdd6f4;
+	display: inline;
+	font-family: "Fira Code", monospace;
+	font-optical-sizing: auto;
+	word-break: break-all;
+}
+
+.scrambled-text-multilingual {
+	color: #cdd6f4;
+	display: inline;
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+}
+
+/* .github-card {
+	background-color: #313244;
+	border-radius: 20px;
+	padding: 30px;
+} */
+
+.static-title {
+	color: #89dceb;
+	display: inline;
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+}
+
+.panel {
+	display: flex;
+	align-items: center; /* Vertically center the title */
+	padding: 20px;
+	/* border: 1px solid #ddd; */
+	background-color: #181825;
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 4px;
+}
+
+.panel-title {
+	flex: 0 0 200px; /* Fixed width for the title area */
+	text-align: center; /* Center the title horizontally */
+	font-size: 24px;
+	font-weight: bold;
+	padding-right: 20px;
+	border-right: 2px solid #89dceb;
+	color: #89dceb;
+	display: inline;
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+}
+
+.panel-content {
+	flex: 1;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 20px;
+	padding-left: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-item {
+	background-color: #313244;
+	padding: 10px;
+	/* border: 1px solid #ccc; */
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	
+}
+.media-grid-item img {
+	width: 140px;
+	border-radius: 4px;
+}
+
+#media-background {
+	/* width: 80%; */
+	/* position: absolute; */
+	display: flex;
+	flex-direction: row;
+	/* left: 30px; */
+	/* float: left; */
+	/* align-items: center; */
+	justify-content: center;
+	/* align-items: flex-center; Aligns the image and text at the top */
+	/* align-content: center; */
+	gap: 10px;
+	padding: 40px;
+	
+}
+
+#media-notes {
+	/* width: 100px; */
+	background-color: #6c7086;
+	border-radius: 10px;
+	padding: 40px;
+	/* height: 470px; */
+	flex-grow: 1;
+}
+
+#preview {
+	height: 550px;
+	border-radius: 30px;
 }
