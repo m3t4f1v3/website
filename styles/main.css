@@ -228,8 +228,10 @@ body {
 } */
 
 .media-title {
-	color: #cdd6f4;
-	
+	background-clip: text;
+	color: transparent;
+	pointer-events: none;
+	/* background-image: url("../images/posters/all-about-lily-chou-chou.jpg"); */
 }
 
 .parallax-image {
@@ -264,7 +266,7 @@ body {
 	/* position: absolute; */
 	flex-grow: 1;
 	max-width: 40%;
-	top:0px;
+	/* top: 0px; */
 	/* right: 300px; */
 	z-index: 1;
 }
