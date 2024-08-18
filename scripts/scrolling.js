@@ -88,9 +88,35 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.parallax-image').forEach((image, i) => {
         gsap.to(image, {
             x: (i, target) => {
-                const speed = 100 * (i + 1);
+                const speed = 130 * (i + 1);
                 return `${speed}%`;
             },
+            y: (i, target) => {
+                const speed = 130 * (i + 1);
+                return `${speed}%`;
+            },
+            rotation: "-15deg",
+            ease: 'none',
+            scrollTrigger: {
+                trigger: horizontalSection,
+                start: "top bottom",
+                scrub: true,
+                end: () => "+=" + (horizontalSection.scrollWidth - window.innerWidth)
+            }
+        });
+    });
+
+    document.querySelectorAll('.parallax-preview').forEach((image, i) => {
+        gsap.to(image, {
+            x: (i, target) => {
+                const speed = -120 * (i + 1);
+                return `${speed}%`;
+            },
+            y: (i, target) => {
+                const speed = -120 * (i + 1);
+                return `${speed}%`;
+            },
+            rotation: "-10deg",
             ease: 'none',
             scrollTrigger: {
                 trigger: horizontalSection,
