@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     var controller = new ScrollMagic.Controller();
     var scene = new ScrollMagic.Scene({
-        triggerElement: "#trigger1", duration: "200%",
+        triggerElement: "#trigger1", duration: "100%",
         triggerHook: 0
     })
         .setPin("#media", { pushFollowers: false })

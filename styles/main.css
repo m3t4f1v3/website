@@ -143,6 +143,10 @@ body {
 	word-break: break-all;
 }
 
+.link {
+	font-weight: 800;
+}
+
 .scrambled-text-multilingual {
 	color: #cdd6f4;
 	display: inline;
@@ -169,7 +173,8 @@ body {
 	padding: 20px;
 	/* border: 1px solid #ddd; */
 	background-color: #181825;
-	width: 80%;
+	/* width: 0%; */
+	/* height: 20%; */
 	margin: 0 auto;
 	border-radius: 4px;
 }
@@ -207,11 +212,11 @@ body {
 	
 }
 .media-grid-item img {
-	width: 140px;
+	width: 9vw;
 	border-radius: 4px;
 }
 
-#media-background {
+#media-preview-div {
 	/* width: 80%; */
 	/* position: absolute; */
 	display: flex;
@@ -237,6 +242,7 @@ body {
 }
 
 #preview {
-	height: 550px;
+	height: 50vh;
 	border-radius: 30px;
 }
+
