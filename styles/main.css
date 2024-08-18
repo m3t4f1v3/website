@@ -176,7 +176,7 @@ body {
 	height: 100vh;
 	/* top: 50vh; */
 	overflow: hidden;
-	background-image: linear-gradient(210deg, "#101214", "#394e38", "#778843", "#deeb57", "#3d5a8a");
+	background-image: linear-gradient(210deg, #101214, #394e38, #778843, #deeb57, #3d5a8a)	;
 	border-radius: 50px;
 	/* filter: blur(8px); */
 }
