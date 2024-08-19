@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const originalText = element.innerText;
         element.innerText = scrambleText(originalText, 0)
         delay = 50 + 50 * Math.random()
-        descrablingState = 0 // scrambled, descrambling, descrambled
+        descramblingState = 0 // scrambled, descrambling, descrambled
         // descramblingEnded = false
         var timeout = 0
         function descramble(start) {
@@ -90,22 +90,22 @@ document.addEventListener("DOMContentLoaded", function () {
             const scrambledText = scrambleText(originalText, start);
             element.innerText = scrambledText;
             if (start == originalText.length) {
-                descrablingState = 2 // descrambled
+                descramblingState = 2 // descrambled
             } else {
                 timeout = setTimeout(() => descramble(start + 1, delay), delay);
             }
         }
         element.addEventListener("mouseover", function () {
-            if (descrablingState == 0) {
+            if (descramblingState == 0) {
                 descramble(0)
-                descrablingState = 1
+                descramblingState = 1
                 // descramblingStarted = true
             }
         });
         element.addEventListener("click", function () {
             // console.log("skipped ")
             clearTimeout(timeout)
-            descrablingState = 2
+            descramblingState = 2
             element.innerText = originalText;
         })
     });
