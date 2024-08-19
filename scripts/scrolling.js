@@ -24,41 +24,21 @@ document.addEventListener("DOMContentLoaded", function () {
         ease: 'none',
         // opacity: 1,
     });
-});
 
-// Parallax effect for images
-document.querySelectorAll('.parallax-image').forEach((image, i) => {
 
-    gsap.to(image, {
-        x: (i, target) => {
-            const speed = 130 * (i + 1);
-            return `${speed}%`;
-        },
-        y: (i, target) => {
-            const speed = 130 * (i + 1);
-            return `${speed}%`;
-        },
-        rotation: "-15deg",
-        ease: 'none',
-        scrollTrigger: {
-            trigger: horizontalSection,
-            start: "top bottom",
-            scrub: 1,
-            end: () => "+=" + (horizontalSection.scrollWidth - window.innerWidth)
-        }
-    });
+    // Parallax effect for images
+    document.querySelectorAll('.parallax-image').forEach((image, i) => {
 
-    document.querySelectorAll('.parallax-preview').forEach((image, i) => {
         gsap.to(image, {
             x: (i, target) => {
-                const speed = -120 * (i + 1);
+                const speed = 130 * (i + 1);
                 return `${speed}%`;
             },
             y: (i, target) => {
-                const speed = -120 * (i + 1);
+                const speed = 130 * (i + 1);
                 return `${speed}%`;
             },
-            rotation: "10deg",
+            rotation: "-15deg",
             ease: 'none',
             scrollTrigger: {
                 trigger: horizontalSection,
@@ -67,5 +47,27 @@ document.querySelectorAll('.parallax-image').forEach((image, i) => {
                 end: () => "+=" + (horizontalSection.scrollWidth - window.innerWidth)
             }
         });
+
+        document.querySelectorAll('.parallax-preview').forEach((image, i) => {
+            gsap.to(image, {
+                x: (i, target) => {
+                    const speed = -120 * (i + 1);
+                    return `${speed}%`;
+                },
+                y: (i, target) => {
+                    const speed = -120 * (i + 1);
+                    return `${speed}%`;
+                },
+                rotation: "10deg",
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: horizontalSection,
+                    start: "top bottom",
+                    scrub: 1,
+                    end: () => "+=" + (horizontalSection.scrollWidth - window.innerWidth)
+                }
+            });
+        });
     });
+
 });
