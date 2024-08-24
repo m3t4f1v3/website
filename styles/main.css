@@ -65,10 +65,10 @@ body {
 	animation: spin 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
-#smiley[dropping] {
+#smiley[wiggling] {
 	transform-origin: bottom;
 	/* transform: perspective(800px); */
-	animation: drop 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+	animation: wiggle 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 @keyframes spin {
@@ -87,7 +87,7 @@ body {
 	}
 }
 
-@keyframes drop {
+@keyframes wiggle {
 	0% {
 		transform: perspective(800px) rotateX(0deg);
 		filter: blur(0px);
@@ -151,6 +151,8 @@ body {
 .static-text {
 	color: #cdd6f4;
 	display: inline;
+	font-size: large;
+	/* line-height: 200%; */
 	font-family: "Fira Code", monospace;
 	font-optical-sizing: auto;
 	/* word-break: break-all; */
@@ -187,8 +189,8 @@ body {
 	overflow: hidden;
 	/* background-image: linear-gradient(210deg, #101214, #394e38, #778843, #deeb57, #3d5a8a); */
 	border-radius: 50px;
-	background-image: url("../images/posters/backgrounds/all-about-lily-chou-chou.jpg");
-	background-size: cover;
+	/* background-image: url("../images/posters/backgrounds/all-about-lily-chou-chou.jpg"); */
+	/* background-size: cover; */
 	/* padding: 30px; */
 	/* filter: blur(8px); */
 }
@@ -205,7 +207,7 @@ body {
 	/* max-width: 100%; */
 	height: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: center;
 	font-size: 2rem;
 	will-change: transform;
@@ -245,7 +247,33 @@ body {
 	background-clip: text;
 	color: transparent;
 	pointer-events: none;
+	/* background-position: 10% 10%; */
 	/* background-image: url("../images/posters/all-about-lily-chou-chou.jpg"); */
+}
+
+#media-title-1 {
+	background-image: url("../images/posters/backgrounds/all-about-lily-chou-chou.jpg");
+}
+
+#media-title-2 {
+	background-image: url("../images/posters/backgrounds/even-if-this-love-disappears-from-the-world-tonight.jpg");
+}
+
+#media-title-3 {
+	background-image: url("../images/posters/backgrounds/cowboy-bebop.jpg");
+}
+
+#media-title-4 {
+	background-image: url("../images/posters/backgrounds/terror-in-resonance.jpg");
+}
+
+#media-title-5 {
+	background-image: url("../images/posters/backgrounds/words-bubble-up-like-soda-pop.jpg");
+	background-position: 70% 40%;
+}
+
+#media-title-6 {
+	background-image: url("../images/posters/backgrounds/monster.jpg");
 }
 
 /* .media-title::before{
@@ -253,35 +281,45 @@ body {
 } */
 
 #media-backgrounds {
-    position: fixed; /* Change to absolute if it needs to scroll with content */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Adjust to cover the viewport */
-    overflow: hidden;
-    z-index: -1; /* Ensure it's behind the content */
+	position: fixed;
+	/* Change to absolute if it needs to scroll with content */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	/* Adjust to cover the viewport */
+	overflow: hidden;
+	z-index: -1;
+	/* Ensure it's behind the content */
 }
 
 #media-backgrounds img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the container */
-    opacity: 0; /* Start hidden */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* Cover the container */
+	opacity: 0;
+	filter: blur(50px) brightness(50%);
+	/* z-index: 10; */
+}
+
+#media-backgrounds img:first-child {
+	opacity: 1;
+	/* Make the first image visible initially */
 }
 
 .parallax-image {
 	position: absolute;
-	width: 200px;
+	width: 300px;
 	/* Adjust as needed */
 	height: auto;
 	transform: rotate(15deg);
 	border-radius: 10px;
 	left: 100px;
-	top: 100px;
-	/* Maintain aspect ratio */
+	top: 0;
 	z-index: -1;
 	/* Ensure they are above other content */
 }
@@ -304,6 +342,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
+	/* line-height: 100%; */
 	/* flex-wrap: wrap; */
 	/* padding: 10px; */
 }
@@ -312,14 +351,16 @@ body {
 	/* position: absolute; */
 	/* flex-grow: 1; */
 	max-width: 80%;
+	
 	/* top: 0px; */
 	/* right: 300px; */
-
 	z-index: 1;
 }
 
 .media-quotes {
 	/* text-align: center; */
+	color: #cba6f7;
+	text-shadow: 2px 2px 10px #735e8d;
 	max-width: 70%;
 }
 

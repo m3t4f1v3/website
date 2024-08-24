@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clip = document.getElementById("logo-clipping")
         if (smiley.hasAttribute("sidebar-open")) {
 
-            smiley.setAttribute("dropping", "")
+            smiley.setAttribute("wiggling", "")
             setTimeout(() => {
                 clip.setAttribute("clipping", "")
             }, 150)
@@ -95,14 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 timeout = setTimeout(() => descramble(start + 1, delay), delay);
             }
         }
-        element.addEventListener("mouseover", function () {
+        // element.addEventListener("mouseover", function () {
             if (descramblingState == 0) {
                 descramble(0)
                 descramblingState = 1
                 // descramblingStarted = true
             }
-        });
-        element.addEventListener("click", function () {
+        // });
+        element.addEventListener("mouseover", function () {
             // console.log("skipped ")
             clearTimeout(timeout)
             descramblingState = 2

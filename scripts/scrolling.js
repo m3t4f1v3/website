@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = gsap.utils.toArray(".horizontal-item");
 
     // Log section count for debugging
-    console.log('Number of sections:', sections.length);
+    // console.log('Number of sections:', sections.length);
 
     // Create the horizontal scroll timeline
     const horizontalTimeline = gsap.timeline({
@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
             trigger: horizontalSection,
             pin: true,
             scrub: 1,
-            // snap: 1 / (sections.length - 1), // might be broken
+            snap: 1 / (sections.length - 1), // might be broken
             start: "top top",
             end: () => "+=" + (horizontalSection.scrollWidth - window.innerWidth),
-            markers: { startColor: "white", endColor: "white", fontSize: "18px", fontWeight: "bold", indent: 20 }
+            // markers: { startColor: "white", endColor: "white", fontSize: "18px", fontWeight: "bold", indent: 20 }
         }
     });
 
@@ -42,32 +42,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add each image to the mediaBackgroundTimeline
     //https://www.desmos.com/calculator/tx1bxcmvz9
-    function gaussianDist(x, scale, average, stdev) {
-        return scale*Math.exp(-((x-average)**2)/(2*stdev**2))
-    }
-    horizontalTimeline.fromTo(mediaBackgrounds,
-        { opacity: 0 },
-        {
-            opacity: (i, target) => {
-                return gaussianDist()
-                // i / 6
-                // return i
-            },
-            // duration: 1,
-            ease: "none",
-        }, 0);
+    // function gaussianDist(x, scale, average, stdev) {
+    //     return scale * Math.exp(-((x - average) ** 2) / (2 * stdev ** 2))
+    // }
+    // let animDuration = 2 * (sections.length);
+
+    // Set up media background opacity transitions
+    // very much broken, cba to fix it though
+    // 12 = 2*sections.length
+    mediaBackgrounds.forEach((mediaBackground, i) => {
+        horizontalTimeline.to(mediaBackground, {
+            opacity: 1,
+            duration: 1 / 12,
+            ease: "power1.inOut",
+        }, Math.max(0, i - 0.5) / 12)
+    });
+
 
     const parallaxImages = gsap.utils.toArray(".parallax-image");
     // Parallax effect for images
     // document.querySelectorAll('.parallax-image').forEach((image, i) => {
     horizontalTimeline.to(parallaxImages, {
         xPercent: (i, target) => {
-            const speed = 20 * (i + 1);
+            const speed = 10 * (i + 1);
             // return `${speed}%`;
             return speed
         },
         yPercent: (i, target) => {
-            const speed = 20 * (i + 1);
+            const speed = 10 * (i + 1);
             // return `${speed}%`;
             return speed
         },
