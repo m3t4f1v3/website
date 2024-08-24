@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 500); // Adjust the timeout duration to match the transition time
         } else {
             clip.removeAttribute("clipping")
-            smiley.removeAttribute("dropping")
+            smiley.removeAttribute("wiggling")
             setTimeout(() => {
                 // Change the image after the spin completes
                 smiley.src = "images/logos/edsideeye.png";

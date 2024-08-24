@@ -367,3 +367,28 @@ body {
 .center-text {
 	text-align: center;
 }
+
+.github-repo-title {
+	color: #cba6f7;
+}
+
+#github-cards {
+	display: flex;
+	justify-content: space-around;
+	/* vertical-align: cen; */
+	flex-wrap: wrap;
+}
+
+.github-card-content {
+	background-color: #313244;
+	padding: 3%;
+	border-radius: 10px;
+	width: 30%;
+	flex-grow: 1;
+	margin: 1%;
+}
+
+.github-logo {
+	width: 10%;
+	float: right;
+}
