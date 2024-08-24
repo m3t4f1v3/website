@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
-    const horizontalSection = document.querySelector('.horizontal-section');
+    const horizontalSection = document.querySelector('#media');
     const sections = gsap.utils.toArray(".horizontal-item");
 
     // Log section count for debugging
