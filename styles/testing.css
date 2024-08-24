@@ -1,0 +1,24 @@
+html {
+	background-color: #1e1e2e;
+	max-width: 100%;
+	/* overflow-x: hidden; */
+	/* overflow-y: hidden; */
+	height: 400vh;
+}
+
+#eva01 {
+	position: relative;
+}
+
+.eva01-component {
+    position: absolute;
+	/* height: 50%; */
+
+    /* bottom: 10vw; */
+}
+
+#eva01-head { transform: translate3d(147.234px, 212.335px, 0px); }
+#eva01-left-arm-cutoff { transform: translate3d(1354.46px, 925.036px, 0px); }
+#eva01-right-arm { transform: translate3d(545.841px, 981.193px, 0px); }
+#eva01-shoulder-blade { transform: translate3d(874.256px, 30.9157px, 0px); }
+#eva01-torso { transform: translate3d(433.327px, 371.495px, 0px); }

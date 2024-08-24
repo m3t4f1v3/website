@@ -1,0 +1,11 @@
+future plans:
+embed a few more projects
+
+partially implemented:
+eva 01 assembly - remember to find an entry plug animation/make one myself
+
+chores:
+add more personal links
+
+if it bugs me:
+the media background changing isn't currently accurate, 1st blends onto 2nd, can't really see it though

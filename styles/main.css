@@ -5,7 +5,7 @@ html {
 	max-width: 100%;
 	overflow-x: hidden;
 	/* overflow-y: hidden; */
-	height: 200vh;
+	height: 300vh;
 }
 
 body {
@@ -351,7 +351,7 @@ body {
 	/* position: absolute; */
 	/* flex-grow: 1; */
 	max-width: 80%;
-	
+
 	/* top: 0px; */
 	/* right: 300px; */
 	z-index: 1;
@@ -391,4 +391,33 @@ body {
 .github-logo {
 	width: 10%;
 	float: right;
+}
+
+#eva01 {
+	position: relative;
+}
+
+.eva01-component {
+	position: absolute;
+	/* bottom: 10vw; */
+}
+
+#eva01-head {
+	transform: translate3d(147.234px, 212.335px, 0px);
+}
+
+#eva01-left-arm-cutoff {
+	transform: translate3d(1354.46px, 925.036px, 0px);
+}
+
+#eva01-right-arm {
+	transform: translate3d(545.841px, 981.193px, 0px);
+}
+
+#eva01-shoulder-blade {
+	transform: translate3d(874.256px, 30.9157px, 0px);
+}
+
+#eva01-torso {
+	transform: translate3d(433.327px, 371.495px, 0px);
 }
