@@ -400,6 +400,7 @@ body {
 	/* max-height: 100px; Set max height to 100% of the viewport height */
     /* height: 50%;  */
 	/* transform: scale(0.5); */
+	transform: scale(0.5);
 }
 
 .eva01-component:not(#eva01-torso) {

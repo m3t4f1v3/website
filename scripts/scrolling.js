@@ -126,8 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     evaTimeline
         .from("#eva01-head", { yPercent: 30, duration: 1 }, 0)
-        .from("#eva01-left-arm-cutoff", { yPercent: 10, rotation: "30deg", duration: 1 }, 0)
-        .from("#eva01-right-arm", { yPercent: 30, xPercent: 40, rotation:"-15deg", duration: 1 }, 0)
+        .from("#eva01-left-arm-cutoff", { xPercent: 40, yPercent: 30, rotation: "30deg", duration: 1 }, 0)
+        .from("#eva01-right-arm", { xPercent: 40, yPercent: 30, rotation:"-15deg", duration: 1 }, 0)
         .from("#eva01-shoulder-blade", { yPercent: -20, duration: 1 }, 0)
         .from("#eva01-torso", { yPercent: 40, duration: 1 }, 0);
 });
