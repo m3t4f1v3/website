@@ -108,5 +108,26 @@ document.addEventListener("DOMContentLoaded", function () {
         // }
     }, 0);
     // });
+    const scrollHeight = eva01.scrollHeight;
+    const viewportHeight = window.innerHeight;
+    const endScrollPosition = scrollHeight - viewportHeight;
 
+    const evaTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: eva01,
+            pin: true,
+            scrub: 1,
+            duration: "200%",
+            start: "top top",
+            end: () => "+=" + eva01.scrollHeight, // Ensure full content is scrolled
+            markers: { startColor: "white", endColor: "white", fontSize: "18px", fontWeight: "bold", indent: 20 }
+        }
+    });
+
+    evaTimeline
+        .from("#eva01-head", { yPercent: 30, duration: 1 }, 0)
+        .from("#eva01-left-arm-cutoff", { yPercent: 10, rotation: "30deg", duration: 1 }, 0)
+        .from("#eva01-right-arm", { yPercent: 30, xPercent: 40, rotation:"-15deg", duration: 1 }, 0)
+        .from("#eva01-shoulder-blade", { yPercent: -20, duration: 1 }, 0)
+        .from("#eva01-torso", { yPercent: 40, duration: 1 }, 0);
 });

@@ -5,7 +5,7 @@ html {
 	max-width: 100%;
 	overflow-x: hidden;
 	/* overflow-y: hidden; */
-	height: 300vh;
+	/* height: 1000vh; */
 }
 
 body {
@@ -395,11 +395,15 @@ body {
 
 #eva01 {
 	position: relative;
+	background-image: url("../images/backgrounds/eva01.png");
+	background-size: contain;
+	/* max-height: 100px; Set max height to 100% of the viewport height */
+    /* height: 50%;  */
+	/* transform: scale(0.5); */
 }
 
-.eva01-component {
+.eva01-component:not(#eva01-torso) {
 	position: absolute;
-	/* bottom: 10vw; */
 }
 
 #eva01-head {
