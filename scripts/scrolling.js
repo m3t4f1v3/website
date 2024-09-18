@@ -107,19 +107,25 @@ document.addEventListener("DOMContentLoaded", function () {
         //     end: () => "+=" + (horizontalSection.scrollWidth - window.innerWidth),
         // }
     }, 0);
+
     // });
-    const scrollHeight = eva01.scrollHeight;
-    const viewportHeight = window.innerHeight;
-    const endScrollPosition = scrollHeight - viewportHeight;
+
+
+    const eva01 = document.querySelector("#eva01")
+    const eva01Components = document.querySelector("#eva01-components")
+
+    // const scrollHeight = eva01.scrollHeight;
 
     const evaTimeline = gsap.timeline({
         scrollTrigger: {
             trigger: eva01,
             pin: true,
             scrub: 1,
-            duration: "200%",
-            start: "top top",
-            end: () => "+=" + eva01.scrollHeight, // Ensure full content is scrolled
+            // duration: "200%",
+            // start: "top top",
+            start: "center center",
+            // end: "bottom -100%",
+            // end: () => "+=" + 2*(eva01.scrollHeight - window.innerHeight), // Ensure full content is scrolled
             markers: { startColor: "white", endColor: "white", fontSize: "18px", fontWeight: "bold", indent: 20 }
         }
     });
@@ -127,7 +133,8 @@ document.addEventListener("DOMContentLoaded", function () {
     evaTimeline
         .from("#eva01-head", { yPercent: 30, duration: 1 }, 0)
         .from("#eva01-left-arm-cutoff", { xPercent: 40, yPercent: 30, rotation: "30deg", duration: 1 }, 0)
-        .from("#eva01-right-arm", { xPercent: 40, yPercent: 30, rotation:"-15deg", duration: 1 }, 0)
+        .from("#eva01-right-arm", { xPercent: 40, yPercent: 35, rotation: "-15deg", duration: 1 }, 0)
         .from("#eva01-shoulder-blade", { yPercent: -20, duration: 1 }, 0)
-        .from("#eva01-torso", { yPercent: 40, duration: 1 }, 0);
+        .from("#eva01-torso", { yPercent: 40, duration: 1 }, 0)
+    // .to("#eva01", {backgroundPositionY: "50%"})
 });

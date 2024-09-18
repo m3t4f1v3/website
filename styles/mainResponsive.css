@@ -409,7 +409,7 @@ body {
 	/* max-height: 6.59vw; Set max height to 100% of the viewport height */
 	/* height: 50%;  */
 	/* transform: scale(0.5); */
-	transform: scale(0.475);
+	transform: scale(0.375);
 	/* scale = -0.5*zoom + -0.873 */
 }
 
@@ -417,37 +417,44 @@ body {
 	position: absolute;
 }
 
+
 #eva01-head {
-	transform: translate3d(9.71%, 212.335px, 0px);
+	transform: translate3d(147.15.43%, 212.22.08%, 0);
 }
 
 #eva01-left-arm-cutoff {
-	transform: translate3d(1354.46px, 925.036px, 0px);
+	transform: translate3d(1354.3.03%, 925.2.37%, 0);
 }
 
 #eva01-right-arm {
-	transform: translate3d(545.841px, 981.193px, 0px);
+	transform: translate3d(545.55.44%, 981.12.72%, 0);
 	z-index: -1;
 }
 
 #eva01-shoulder-blade {
-	transform: translate3d(874.256px, 30.9157px, 0px);
+	transform: translate3d(874.16.88%, 30.603.63%, 0);
 }
 
 #eva01-torso {
-	transform: translate3d(433.327px, 371.495px, 0px);
+	transform: translate3d(433.21.56%, 371.32.63%, 0);
 }
+
+
 
 
 .title-card {
 	display: flex;
 	font-size: 50vh;
 	position: absolute;
-	justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    width: 100%; /* Ensure the parent takes full width if needed */
-    height: 100%; /* Ensure the parent takes full height if needed */
-    text-align: center;
+	justify-content: center;
+	/* Centers horizontally */
+	align-items: center;
+	/* Centers vertically */
+	width: 100%;
+	/* Ensure the parent takes full width if needed */
+	height: 100%;
+	/* Ensure the parent takes full height if needed */
+	text-align: center;
 	/* text-align: center; */
 	/* vertical-align: middle; */
 }

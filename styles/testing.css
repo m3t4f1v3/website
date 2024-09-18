@@ -17,8 +17,8 @@ html {
     /* bottom: 10vw; */
 }
 
-#eva01-head { transform: translate3d(147.234px, 212.335px, 0px); }
-#eva01-left-arm-cutoff { transform: translate3d(1354.46px, 925.036px, 0px); }
-#eva01-right-arm { transform: translate3d(545.841px, 981.193px, 0px); }
-#eva01-shoulder-blade { transform: translate3d(874.256px, 30.9157px, 0px); }
-#eva01-torso { transform: translate3d(433.327px, 371.495px, 0px); }
+#eva01-head { transform: translate3d(0.64%, 61.44%, 0px); }
+#eva01-left-arm-cutoff { transform: translate3d(79.75%, 161.26%, 0px); }
+#eva01-right-arm { transform: translate3d(26.21%, 168.50%, 0px); }
+#eva01-shoulder-blade { transform: translate3d(48.76%, 39.13%, 0px); }
+#eva01-torso { transform: translate3d(18.98%, 85.02%, 0px); }
