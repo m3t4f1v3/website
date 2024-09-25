@@ -7,18 +7,21 @@ html {
 }
 
 #eva01 {
+	background-image: url("../images/backgrounds/eva01.png");
 	position: relative;
+	/* height: 200vh; */
+	transform: scale(0.475);
 }
 
 .eva01-component {
     position: absolute;
 	/* height: 50%; */
-
+	/* transform: scale(0.475); */
     /* bottom: 10vw; */
 }
 
-#eva01-head { transform: translate3d(0.64%, 61.44%, 0px); }
-#eva01-left-arm-cutoff { transform: translate3d(79.75%, 161.26%, 0px); }
-#eva01-right-arm { transform: translate3d(26.21%, 168.50%, 0px); }
-#eva01-shoulder-blade { transform: translate3d(48.76%, 39.13%, 0px); }
-#eva01-torso { transform: translate3d(18.98%, 85.02%, 0px); }
+#eva01-head { transform: translate(-0.26vw, 29.58vh); }
+#eva01-left-arm-cutoff { transform: translate(74.74vw, 140.88vh); }
+#eva01-right-arm { transform: translate(29.05vw, 150.82vh); }
+#eva01-shoulder-blade { transform: translate(52.80vw, 2.17vh); }
+#eva01-torso { transform: translate(20.68vw, 56.12vh); }

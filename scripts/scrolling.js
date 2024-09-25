@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // duration: "200%",
             // start: "top top",
             start: "center center",
-            // end: "bottom -100%",
+            end: "center bottom",
             // end: () => "+=" + 2*(eva01.scrollHeight - window.innerHeight), // Ensure full content is scrolled
             markers: { startColor: "white", endColor: "white", fontSize: "18px", fontWeight: "bold", indent: 20 }
         }

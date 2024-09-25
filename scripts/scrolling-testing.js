@@ -35,47 +35,47 @@ document.addEventListener("DOMContentLoaded", function () {
     const components = document.querySelectorAll('.eva01-component');
     components.forEach(component => {
         Draggable.create(component, {
-            onDragEnd: updatePositions
+            // onDragEnd: updatePositions
         });
     });
 
-    function updatePositions() {
-        components.forEach(component => {
-            component.style.left = `${component._gsTransform.x}px`;
-            component.style.top = `${component._gsTransform.y}px`;
-        });
-    }
+    // function updatePositions() {
+    //     components.forEach(component => {
+    //         component.style.left = `${component._gsTransform.x}px`;
+    //         component.style.top = `${component._gsTransform.y}px`;
+    //     });
+    // }
 
     function saveCSS() {
         const elements = document.querySelectorAll('.eva01-component');
         let cssContent = '';
 
         elements.forEach(el => {
-    const matrix = getComputedStyle(el).transform;
-    const matrixValues = matrix.match(/matrix.*\((.+)\)/)[1].split(', ').map(Number);
-    const x = matrixValues[4];
-    const y = matrixValues[5];
-    const z = matrixValues[6] || 0; // Default to 0 if not available
+            const matrix = getComputedStyle(el).transform;
+            const matrixValues = matrix.match(/matrix.*\((.+)\)/)[1].split(', ').map(Number);
+            const x = matrixValues[4];
+            const y = matrixValues[5];
+            // const z = matrixValues[6] || 0; // Default to 0 if not available
 
-    // Assuming you want to convert based on the parent element's dimensions
-    // const parent = el.parentElement;
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+            // Assuming you want to convert based on the parent element's dimensions
+            // const parent = el.parentElement;
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
 
-    // Convert px to % based on the parent's dimensions
-    const xPercent = (x / windowWidth) * 100;
-    const yPercent = (y / windowHeight) * 100;
+            // Convert px to % based on the parent's dimensions
+            const xPercent = (x / windowWidth) * 100;
+            const yPercent = (y / windowHeight) * 100;
 
-    // Construct the CSS content with percentages
-    cssContent += `#${el.id} { transform: translate3d(${xPercent.toFixed(2)}%, ${yPercent.toFixed(2)}%, ${z}px); }\n`;
-});
+            // Construct the CSS content with percentages
+            cssContent += `#${el.id} { transform: translate(${xPercent.toFixed(2)}vw, ${yPercent.toFixed(2)}vh); }\n`;
+        });
 
-
-        const blob = new Blob([cssContent], { type: 'text/css' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'positions.css';
-        link.click();
+        console.log(cssContent)
+        // const blob = new Blob([cssContent], { type: 'text/css' });
+        // const link = document.createElement('a');
+        // link.href = URL.createObjectURL(blob);
+        // link.download = 'positions.css';
+        // link.click();
     }
 
     document.addEventListener('keydown', (e) => {
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // const scrollHeight = eva01.scrollHeight;
     // const viewportHeight = window.innerHeight;
     // const endScrollPosition = scrollHeight - viewportHeight;
-    
+
     // const evaTimeline = gsap.timeline({
     //     scrollTrigger: {
     //         trigger: eva01,
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //         markers: { startColor: "white", endColor: "white", fontSize: "18px", fontWeight: "bold", indent: 20 }
     //     }
     // });
-    
+
     // evaTimeline
     //     .from("#eva01-head", { yPercent: 100, duration: 1 }, 0)
     //     .from("#eva01-left-arm-cutoff", { yPercent: 100, duration: 1 }, 0)

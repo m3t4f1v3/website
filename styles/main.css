@@ -396,47 +396,24 @@ body {
 }
 
 #eva01 {
-	background-image: url("../images/blowups/eva01/background.png");
-	background-size: 100%;
-	background-position: center center;
-	background-repeat: no-repeat;
-}
-
-#eva01-components {
+	background-image: url("../images/backgrounds/eva01.png");
 	position: relative;
-	/* background-image: url("../images/backgrounds/eva01.png"); */
-	/* background-size: contain; */
-	/* max-height: 6.59vw; Set max height to 100% of the viewport height */
-	/* height: 50%;  */
-	/* transform: scale(0.5); */
+	height: 200vh;
 	transform: scale(0.475);
-	/* scale = -0.5*zoom + -0.873 */
 }
 
-.eva01-component:not(#eva01-torso) {
-	position: absolute;
+.eva01-component {
+    position: absolute;
+	/* height: 50%; */
+	/* transform: scale(0.475); */
+    /* bottom: 10vw; */
 }
 
-#eva01-head {
-	transform: translate3d(9.71%, 212.335px, 0px);
-}
-
-#eva01-left-arm-cutoff {
-	transform: translate3d(1354.46px, 925.036px, 0px);
-}
-
-#eva01-right-arm {
-	transform: translate3d(545.841px, 981.193px, 0px);
-	z-index: -1;
-}
-
-#eva01-shoulder-blade {
-	transform: translate3d(874.256px, 30.9157px, 0px);
-}
-
-#eva01-torso {
-	transform: translate3d(433.327px, 371.495px, 0px);
-}
+#eva01-head { transform: translate(-0.26vw, 29.58vh); }
+#eva01-left-arm-cutoff { transform: translate(74.74vw, 140.88vh); }
+#eva01-right-arm { transform: translate(29.05vw, 150.82vh); }
+#eva01-shoulder-blade { transform: translate(52.80vw, 2.17vh); }
+#eva01-torso { transform: translate(20.68vw, 56.12vh); }
 
 
 .title-card {
