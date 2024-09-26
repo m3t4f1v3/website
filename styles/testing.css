@@ -1,5 +1,5 @@
 html {
-	background-color: #1e1e2e;
+	/* background-color: #1e1e2e; */
 	max-width: 100%;
 	/* overflow-x: hidden; */
 	/* overflow-y: hidden; */
@@ -20,8 +20,8 @@ html {
     /* bottom: 10vw; */
 }
 
-#eva01-head { transform: translate(-0.26vw, 29.58vh); }
-#eva01-left-arm-cutoff { transform: translate(74.74vw, 140.88vh); }
-#eva01-right-arm { transform: translate(29.05vw, 150.82vh); }
-#eva01-shoulder-blade { transform: translate(52.80vw, 2.17vh); }
-#eva01-torso { transform: translate(20.68vw, 56.12vh); }
+#eva01-head { transform: translate(0.86vw, 43.43vh); }
+#eva01-left-arm-cutoff { transform: translate(89.11vw, 154.24vh); }
+#eva01-right-arm { transform: translate(29.83vw, 162.36vh); }
+#eva01-shoulder-blade { transform: translate(53.74vw, 15.46vh); }
+#eva01-torso { transform: translate(21.63vw, 68.49vh); }

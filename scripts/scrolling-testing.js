@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     components.forEach(component => {
         Draggable.create(component, {
             // onDragEnd: updatePositions
+            bounds: { top: 100, left: 0, width: "100%", height: "100%" }
         });
     });
 
@@ -63,11 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const windowHeight = window.innerHeight;
 
             // Convert px to % based on the parent's dimensions
-            const xPercent = (x / windowWidth) * 100;
-            const yPercent = (y / windowHeight) * 100;
+            // const xPercent = (x / windowWidth) * 100;
+            // const yPercent = (y / windowHeight) * 100;
 
             // Construct the CSS content with percentages
-            cssContent += `#${el.id} { transform: translate(${xPercent.toFixed(2)}vw, ${yPercent.toFixed(2)}vh); }\n`;
+            cssContent += `#${el.id} { transform: translate(${x.toFixed(2)}px, ${y.toFixed(2)}px); }\n`;
         });
 
         console.log(cssContent)
