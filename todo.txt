@@ -4,10 +4,7 @@ embed a few more projects
 partially implemented:
 eva 01 assembly - remember to find an entry plug animation/make one myself
 make the eva's mouth open at the end and the eyes start glowing red
-infill the background image or segment it
 
 chores:
 add more personal links
-
-if it bugs me:
-the media background changing isn't currently accurate, 1st blends onto 2nd, can't really see it though
+fix padding in media section

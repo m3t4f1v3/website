@@ -212,46 +212,24 @@ body {
 	align-items: center;
 	font-size: 2rem;
 	will-change: transform;
-	padding: 6.59vw;
+	/* padding: 6.59vw; */
 	/* opacity: 0; */
 }
 
-/* .horizontal-item:nth-child(odd) {
-	background-color: #f0f0f0;
-}
-
-.horizontal-item:nth-child(even) {
-	background-color: #ddd;
-} */
-/* 
-
-#media-wrapper {
-	position: absolute;
-}
-
-.media-card {
-	position: absolute;
-	width: 19.78vw;
-	height: 19.78vw;
-	border-radius: 1.32vw;
-	overflow: hidden;
-}
-
-.poster {
-	width: 100%;
-	height: 100%;
-	box-sizing: border-box;
-	object-fit: cover;
-} */
-
 .media-title {
-	background-clip: text;
+	/* background: url('../images/posters/backgrounds/all-about-lily-chou-chou.jpg'); */
+	background-size: cover;
+	/* background-position: -13.18vw -13.18vw; */
+	font-size: 8rem;
+	background-position: center center;
+	background-repeat: no-repeat;
 	color: transparent;
-	pointer-events: none;
-	font-size: 10vh;
-	/* background-position: 10% 10%; */
-	/* background-image: url("../images/posters/all-about-lily-chou-chou.jpg"); */
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background-clip: text;
 }
+
 
 #media-title-1 {
 	background-image: url("../images/posters/backgrounds/all-about-lily-chou-chou.jpg");
@@ -271,16 +249,11 @@ body {
 
 #media-title-5 {
 	background-image: url("../images/posters/backgrounds/words-bubble-up-like-soda-pop.jpg");
-	background-position: 70% 40%;
 }
 
 #media-title-6 {
 	background-image: url("../images/posters/backgrounds/monster.jpg");
 }
-
-/* .media-title::before{
-	filter: blur(0.26vw);
-} */
 
 #media-backgrounds {
 	position: fixed;
@@ -304,7 +277,7 @@ body {
 	object-fit: cover;
 	/* Cover the container */
 	opacity: 0;
-	filter: blur(3.30vw) brightness(50%);
+	filter: blur(10px) brightness(50%);
 	/* z-index: 10; */
 }
 
