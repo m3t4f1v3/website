@@ -1,10 +1,11 @@
 future plans:
-embed a few more projects
+embed a few more projects, auto embed stars and stuff?
 
 partially implemented:
 eva 01 assembly - remember to find an entry plug animation/make one myself
 make the eva's mouth open at the end and the eyes start glowing red
-eva01 responsiveness
+eva01 responsiveness - scale is NOT a solution
+where do i go from the eva stuff?
 
 chores:
 add more personal links

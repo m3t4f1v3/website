@@ -401,7 +401,7 @@ body {
 }
 
 .eva01-component:not(#eva01-torso) {
-	position: absolute;
+	position: fixed;
 }
 
 #eva01-head {
