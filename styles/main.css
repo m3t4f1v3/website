@@ -157,7 +157,7 @@ body {
 	font-optical-sizing: auto;
 	/* word-break: break-all; */
 	/* overflow: hidden; */
-	word-break: auto-phrase;
+	/* word-break: auto-phrase; */
 	word-wrap: break-word;
 	white-space: pre-line;
 	/* word-break: break-all; */
@@ -281,7 +281,7 @@ body {
 	object-fit: cover;
 	/* Cover the container */
 	opacity: 0;
-	filter: blur(10px) brightness(50%);
+	filter: blur(0.5vw) brightness(50%);
 	/* z-index: 10; */
 }
 
@@ -375,58 +375,60 @@ body {
 }
 
 .github-logo {
-	height: 3rem;
+	height: 5vh;
 	float: right;
 }
 
 #eva01 {
 	background-image: url("../images/blowups/eva01/background.png");
-	background-size: 100%;
+	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	height: 100vh;
 	display: flex;
 	align-items: baseline;
 	justify-content: center;
-	/* margin: auto; */
+	height: 100vh;
+	position: relative; /* Use relative positioning */
 }
 
 #eva01-components {
-	transform: scale(0.4);
+	transform: scale(.9);
+	transform-origin: center; /* Scale from the center */
+	position: absolute; /* Ensure it's centered within the container */
 }
 
-:root {
-	--torso-position-x: 0px;
-	--torso-position-y: -551.5px;
-}
 
 .eva01-component:not(#eva01-torso) {
 	position: fixed;
 }
 
 #eva01-head {
-	transform: translate(calc(var(--torso-position-x) + -283.72px), calc(var(--torso-position-y) + -162.14px));
+	transform: translate(7.21px, 179.60px);
+	z-index: 1
 }
 
 #eva01-left-arm-cutoff {
-	transform: translate(calc(var(--torso-position-x) + 921.77px), calc(var(--torso-position-y) + 554.8px));
+	transform: translate(1204.62px, 900.39px);
 }
 
 #eva01-right-arm {
-	transform: translate(calc(var(--torso-position-x) + 112.01px), calc(var(--torso-position-y) + 607.34px));
 	z-index: -1;
+	transform: translate(398.68px, 951.34px);
 }
 
 #eva01-shoulder-blade {
-	transform: translate(calc(var(--torso-position-x) + 438.62px), calc(var(--torso-position-y) + -343.1px));
+	z-index: 1;
+	transform: translate(725.32px, 4px);
 }
 
 #eva01-torso {
-	transform: translate(var(--torso-position-x), var(--torso-position-y))
+	transform: translate(0px, 0px);
 }
 
+
+
 .title-card {
-	position: absolute;
+	position: relative;
 	font-size: 50vh;
 }
 
