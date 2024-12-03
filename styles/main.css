@@ -388,44 +388,53 @@ body {
 	align-items: baseline;
 	justify-content: center;
 	height: 100vh;
-	position: relative; /* Use relative positioning */
+	position: relative;
+	/* Use relative positioning */
 }
 
 #eva01-components {
-	transform: scale(.9);
-	transform-origin: center; /* Scale from the center */
-	position: absolute; /* Ensure it's centered within the container */
+	transform: scale(0.9);
+	transform-origin: center;
+	/* Scale from the center */
+	position: absolute;
+	/* Ensure it's centered within the container */
 }
 
+.eva01-component {
+	object-fit: contain;
+}
 
 .eva01-component:not(#eva01-torso) {
 	position: fixed;
+	/* height: 10%; */
 }
 
+/* widths derived from width of element divided by width of torso */
 #eva01-head {
-	transform: translate(7.21px, 179.60px);
-	z-index: 1
+	max-width: 50.2%;
+	z-index: 1;
+	transform: translate(231.00px, 291.83px);
 }
 
 #eva01-left-arm-cutoff {
-	transform: translate(1204.62px, 900.39px);
+	max-width: 12.1%;
+	transform: translate(1428.33px, 1008.08px);
 }
 
 #eva01-right-arm {
-	z-index: -1;
-	transform: translate(398.68px, 951.34px);
+	max-width: 21.7%;
+	transform: translate(625.83px, 1066.03px);
 }
 
 #eva01-shoulder-blade {
-	z-index: 1;
-	transform: translate(725.32px, 4px);
+	max-width: 40%;
+	transform: translate(949.77px, 113.17px);
 }
 
 #eva01-torso {
-	transform: translate(0px, 0px);
+	max-width: 100vw;
+	transform: translate(225.44px, 111.42px);
 }
-
-
 
 .title-card {
 	position: relative;
