@@ -74,43 +74,43 @@ body {
 @keyframes spin {
 	0% {
 		transform: rotate(0deg);
-		filter: blur(0.00vw);
+		filter: blur(0px);
 	}
 
 	50% {
-		filter: blur(0.26vw);
+		filter: blur(5px);
 	}
 
 	100% {
 		transform: rotate(720deg);
-		filter: blur(0.00vw);
+		filter: blur(0px);
 	}
 }
 
 @keyframes wiggle {
 	0% {
 		transform: perspective(52.74vw) rotateX(0deg);
-		filter: blur(0.00vw);
+		filter: blur(0px);
 	}
 
 	25% {
 		transform: perspective(52.74vw) rotateX(75deg);
-		filter: blur(0.20vw);
+		filter: blur(5px);
 	}
 
 	50% {
 		transform: perspective(52.74vw) rotateX(-86deg);
-		filter: blur(0.13vw);
+		filter: blur(3px);
 	}
 
 	75% {
 		transform: perspective(52.74vw) rotateX(54deg);
-		filter: blur(0.20vw);
+		filter: blur(5px);
 	}
 
 	100% {
 		transform: perspective(52.74vw) rotateX(0deg);
-		filter: blur(0.00vw);
+		filter: blur(0px);
 	}
 }
 
@@ -216,9 +216,9 @@ body {
 	/* opacity: 0; */
 }
 
-.media-contents {
-	/* padding: 6.59vw; */
-}
+/* .media-contents {
+	padding: 6.59vw;
+} */
 
 .media-title {
 	background-size: cover;
@@ -281,7 +281,7 @@ body {
 	object-fit: cover;
 	/* Cover the container */
 	opacity: 0;
-	filter: blur(0.5vw) brightness(50%);
+	filter: blur(10px) brightness(50%);
 	/* z-index: 10; */
 }
 
@@ -379,24 +379,31 @@ body {
 	float: right;
 }
 
+.itchio-logo {
+	height: 5vh;
+	float: right;
+}
+
 #eva01 {
 	background-image: url("../images/blowups/eva01/background.png");
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
+	/* height: 100vh; */
+	/* position: absolute; */
+	/* Use relative positioning */
 	display: flex;
 	align-items: baseline;
 	justify-content: center;
-	height: 100vh;
-	position: relative;
-	/* Use relative positioning */
 }
 
 #eva01-components {
-	transform: scale(0.9);
-	transform-origin: center;
+	/* transform: scale(1); */
+	/* transform-origin: center; */
 	/* Scale from the center */
-	position: absolute;
+	position: relative;
+	/* transform: scale(1); */
+	/* width: 1000px; */
 	/* Ensure it's centered within the container */
 }
 
@@ -405,11 +412,11 @@ body {
 }
 
 .eva01-component:not(#eva01-torso) {
-	position: fixed;
+	position: absolute;
 	/* height: 10%; */
 }
 
-/* widths derived from width of element divided by width of torso */
+/* widths derived from width of element divided by 1920, heights from guessing */
 #eva01-head {
 	max-width: 36%;
 	z-index: 1;
@@ -431,6 +438,7 @@ body {
 	max-width: 15.5%;
 	left: 20.853645833%;
 	top: 60.389814814%;
+	z-index: -1;
 	/* transform: translate(0px, calc(1066.03px - 111.42px)); */
 	/* New: 400.39px, 954.61px */
 }
@@ -438,7 +446,7 @@ body {
 #eva01-shoulder-blade {
 	max-width: 28.7%;
 	left: 37.725520833%;
-	top: 0.0162037037%;
+	top: 0.162037037%;
 	/* transform: translate(0px, calc(113.17px - 111.42px)); */
 	/* New: 724.33px, 1.75px */
 }
@@ -451,8 +459,11 @@ body {
 
 
 .title-card {
-	position: relative;
-	font-size: 50vh;
+	position: fixed;
+	/* bottom: -30vh; */
+	font-size: 30rem;
+	white-space: nowrap;
+	z-index: -1;
 }
 
 /* hack? */
